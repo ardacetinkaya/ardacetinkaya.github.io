@@ -1,1 +1,0 @@
-# ardacetinkaya.github.io
