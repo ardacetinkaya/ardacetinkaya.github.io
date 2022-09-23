@@ -21,7 +21,8 @@ class Contact extends Component {
                 <div className="tab-content">
                     <div className="tab-pane fade show active" id="bio" role="tabpanel" aria-labelledby="bio-tab">
                         <div className="d-flex flex-row justify-content-between align-items-center float-left">
-                            You can directly reach me from following e-mail address; <img src="/assets/images/email.png" alt="No Spam"></img>
+                            You can directly reach me from following e-mail address; <br />
+                            <img src="/assets/images/email.png" alt="No Spam"></img>
                         </div>
                     </div>
                 </div>

@@ -35,7 +35,7 @@ class Experience extends Component {
         return (<div className="card">
             <div className="card-header">
                 <div className="row gx-0">
-                    <div className="col-6 col-md-8 col-lg-9">
+                    <div className="col-md-8 col-lg-9">
                         <h2 className="h6">Some highlights within my professional experiences</h2>
                     </div>
                 </div>

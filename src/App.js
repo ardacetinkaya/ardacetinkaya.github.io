@@ -98,7 +98,7 @@ class App extends Component {
                   </a>
                 </figure>
               </div>
-              <div className="col-5 col-lg-12 order-2 order-lg-3">
+              <div className="col-1 mx-auto col-lg-12 order-2 order-lg-3">
                 {this.state.loading ?
                   <div className="spinner-grow spinner-grow-sm" role="status">
                     <span className="sr-only"></span>

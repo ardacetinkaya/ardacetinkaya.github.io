@@ -58,6 +58,7 @@ body:before {
     display: block;
     position: absolute;
     background-size: cover;
+    z-index: -10000;
 }
 
 .container {}
