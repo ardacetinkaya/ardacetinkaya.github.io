@@ -89,9 +89,9 @@ export default class DataService {
             ]
         } else if (what ==="me") {
             return `<strong class="h5">Hej</strong>,
-             I’m Arda… I am a software developer; I solve complicated problems in a way that computers can understand so then they provide solutions to <strong>enpower people</strong>. Also I help developers to <strong>do their best</strong>. 
+             I’m Arda… I am a software developer; I solve complicated problems in a way that computers can understand so then they provide solutions to <strong>empower people</strong>. Also I help developers to <strong>do their best</strong>. 
             
-I do analyze and think about the suitable architecture and then implement the necessary approches. And of course, I do <strong>write “code”</strong>. As I have <strong>passion learning new things</strong>, I always have fun to keep my self up to date.  I have been doing these things for +15 years with a great passion. I did the right and best mistakes… I merge lessons from these mistakes with my experience to provide best solutions. 
+I do analyze, think about the suitable architecture and then implement the necessary approaches. And of course, I do <strong>write “code”</strong>. As I have <strong>passion learning new things</strong>, I always have fun to keep my self up to date.  I have been doing these things for +15 years with a great passion. I did the right and best mistakes… I merge lessons from these mistakes with my experience to provide best solutions. 
 
 So far, <strong>distributed systems, service oriented applications</strong> and enterprise level applications are the main solutions which I am involved in. I try to <strong>contribute all stages of development life-cycle</strong> to create valued and quality solutions. <strong>Software development principles, architectural patterns and agile methodologies</strong> are main topics which I focus in my solutions. I do question deeply on these topics to find most suitable implementation.
 
@@ -102,7 +102,7 @@ Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...et
         } else if(what ==="education"){
             return `<strong class="h5">Education</strong> - Çankaya Üniversitesi, Turkey - BS, Computer Engineering @ 2002 - 2006`;
         } else if(what ==="other"){
-            return `<strong class="h5">Other</strong> - Beside these “geek” topics, I like to travel and to explore new places. I like getting to know new people and share experiences. <strong>Listening music ( \\m/ )</strong> takes up a big space in my life. Because of the inner child, I still like doing new things with <strong>“LEGO”</strong>. And sailing is a fun breeze in my life. Maybe I am not a good sport player, but I like playing and following <strong>basketball.</strong>`
+            return `<strong class="h5">Other</strong> - Beside these “geek” topics, I like to travel and to explore new places. I like getting to know new people and share experiences. <strong>Listening music ( \\m/ )</strong> takes up a big space in my life. Because of the inner child, I still like doing new things with <strong>“LEGO”</strong>. And sailing is a fun breeze in my life. Maybe I am not a good sport player, but I like playing <strong>basketball</strong>. and following <strong>basketball events</strong>.`
         }
 
         return ``;
