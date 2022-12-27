@@ -35,6 +35,7 @@ class App extends Component {
     const experience = await this.dataService.getAbout("experience");
     const education = await this.dataService.getAbout("education");
     const other = await this.dataService.getAbout("other");
+    const work = await this.dataService.getAbout("work");
     const skills = await this.dataService.getSkilss();
 
     document.title = "Arda Cetinkaya | Software Engineer @Stockholm, Sweden";
@@ -47,6 +48,7 @@ class App extends Component {
       experience: experience,
       education: education,
       other: other,
+      work: work,
       skills: skills,
       blogPosts: blogPosts,
       blogURL:blogURL,
@@ -62,7 +64,7 @@ class App extends Component {
 
   renderMain = () => {
     if (this.state.currentPage === "about") {
-      return (<About me={this.state.me} education={this.state.education} other={this.state.other} />)
+      return (<About me={this.state.me} education={this.state.education} other={this.state.other} work={this.state.work}  />)
     } else if (this.state.currentPage === "experience") {
       return (<Experience data={this.state.experience} url="https://www.linkedin.com/in/ardacetinkaya/"/>)
     } else if (this.state.currentPage === "blog") {
@@ -73,7 +75,7 @@ class App extends Component {
       return (<Contact data={this.state.socialAddresses}/>)
     } else
     {
-      return (<About me={this.state.me} education={this.state.education} other={this.state.other} />)
+      return (<About me={this.state.me} education={this.state.education} other={this.state.other} work={this.state.work} />)
     }
   }
 

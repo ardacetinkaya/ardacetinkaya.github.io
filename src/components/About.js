@@ -5,6 +5,7 @@ class About extends Component {
         const me = this.props.me;
         const education = this.props.education;
         const other = this.props.other;
+        const work = this.props.work;
         return (<div className="card">
             <div className="card-header">
                 <div className="row gx-0">
@@ -22,6 +23,8 @@ class About extends Component {
                 <div className="tab-content">
                     <div className="tab-pane fade show active" id="bio" role="tabpanel" aria-labelledby="bio-tab">
                         <p style={{whiteSpace: "pre-line"}} dangerouslySetInnerHTML={{ __html: me }}></p>
+                        <hr></hr>
+                        <p style={{whiteSpace: "pre-line"}} dangerouslySetInnerHTML={{ __html: work }}></p>
                         <hr></hr>
                         <p style={{whiteSpace: "pre-line"}} dangerouslySetInnerHTML={{ __html: education }}></p>
                         <p style={{whiteSpace: "pre-line"}} dangerouslySetInnerHTML={{ __html: other }}></p>

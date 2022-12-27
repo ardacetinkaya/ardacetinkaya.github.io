@@ -103,6 +103,8 @@ Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...et
             return `<strong class="h5">Education</strong> - Çankaya Üniversitesi, Turkey - BS, Computer Engineering @ 2002 - 2006`;
         } else if(what ==="other"){
             return `<strong class="h5">Other</strong> - Beside these “geek” topics, I like to travel and to explore new places. I like getting to know new people and share experiences. <strong>Listening music ( \\m/ )</strong> takes up a big space in my life. Because of the inner child, I still like doing new things with <strong>“LEGO”</strong>. And sailing is a fun breeze in my life. Maybe I am not a good sport player, but I like playing <strong>basketball</strong>. and following <strong>basketball events</strong>.`
+        } else if(what ==="work"){
+            return `<strong class="h5">Currently</strong> - Working at <strong><a href="https://www.qliro.com/" target="_blank">Qliro</a></strong> as consultant from <strong><a href="https://www.swedq.se" target="_blank">SwedQ</a></strong>.`
         }
 
         return ``;
@@ -141,10 +143,14 @@ Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...et
             },
             {
                 name:"Azure Cloud Platform",
-                level:85
+                level:90
             },
             {
-                name:"DevOps Principles(CI/CD w/Azure)",
+                name:"AWS",
+                level:35
+            },
+            {
+                name:"DevOps Principles(Azure, GitLab)",
                 level:94
             },
             {
@@ -176,7 +182,7 @@ Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...et
                 level:76
             },
             {
-                name:"Cloud Native Platforms (Kubernetes, OpenShift)",
+                name:"Cloud Native Platforms (Kubernetes, RedHat OpenShift)",
                 level:60
             },
             {
