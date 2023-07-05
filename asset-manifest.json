@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.ac94df3a.js",
-    "index.html": "/index.html",
-    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.ac94df3a.js.map": "/static/js/main.ac94df3a.js.map"
+    "main.css": "/ardacetinkaya.github.io/static/css/main.e6c13ad2.css",
+    "main.js": "/ardacetinkaya.github.io/static/js/main.ac94df3a.js",
+    "index.html": "/ardacetinkaya.github.io/index.html",
+    "main.e6c13ad2.css.map": "/ardacetinkaya.github.io/static/css/main.e6c13ad2.css.map",
+    "main.ac94df3a.js.map": "/ardacetinkaya.github.io/static/js/main.ac94df3a.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
