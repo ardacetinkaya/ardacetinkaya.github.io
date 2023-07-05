@@ -10,7 +10,7 @@ class Blog extends Component {
       return (
         <div className="item col-md-6 col-lg-4" key={index}>
           <article className="post">
-            <figure><a href={article.link} target="_blank" rel="noopener noreferrer" className="hover"><img src={article.thumbnail} alt={article.title} className="article-image" /></a></figure>
+            <figure></figure>
             <div className="post-header">
               <ul className="post-meta">
                 <li className="post-date">{date.toLocaleDateString("en-US", options)}</li>

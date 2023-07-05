@@ -104,7 +104,7 @@ Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...et
         } else if(what ==="other"){
             return `<strong class="h5">Other</strong> - Beside these “geek” topics, I like to travel and to explore new places. I like getting to know new people and share experiences. <strong>Listening music ( \\m/ )</strong> takes up a big space in my life. Because of the inner child, I still like doing new things with <strong>“LEGO”</strong>. And sailing is a fun breeze in my life. Maybe I am not a good sport player, but I like playing <strong>basketball</strong>. and following <strong>basketball events</strong>.`
         } else if(what ==="work"){
-            return `<strong class="h5">Currently</strong> - Working at <strong><a href="https://www.qliro.com/" target="_blank">Qliro</a></strong> as consultant from <strong><a href="https://www.swedq.se" target="_blank">SwedQ</a></strong>.`
+            return `<strong class="h5">Currently</strong> - Working at <strong><a href="https://www.qliro.com/" target="_blank"><img src="assets/images/companies/qliro.png" width="15%" ></a></strong> as consultant from <strong><a href="https://www.swedq.se" target="_blank"><img src="assets/images/companies/swedq.png" width="12%" ></a></strong>.`
         }
 
         return ``;
@@ -147,7 +147,7 @@ Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...et
             },
             {
                 name:"AWS",
-                level:35
+                level:75
             },
             {
                 name:"DevOps Principles(Azure, GitLab)",
