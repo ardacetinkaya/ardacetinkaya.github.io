@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import Social from "./Social";
 
 class Contact extends Component {
     render() {
-        const socialAddresses = this.props.data;
         return (<div className="card">
             <div className="card-header">
                 <div className="row gx-0">

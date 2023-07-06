@@ -95,7 +95,7 @@ I do analyze, think about the suitable architecture and then implement the neces
 
 So far, <strong>distributed systems, service oriented applications</strong> and enterprise level applications are the main solutions which I am involved in. I try to <strong>contribute all stages of development life-cycle</strong> to create valued and quality solutions. <strong>Software development principles, architectural patterns and agile methodologies</strong> are main topics which I focus in my solutions. I do question deeply on these topics to find most suitable implementation.
 
-<strong>Cloud platforms(Azure)</strong> are the main parts of the solutions that I worked lately. And also <strong>cloud native platforms and technologies</strong> are in my toolbox. I have been providing suitable and required features within cloud native solutions.
+<strong>Cloud platforms(Azure, AWS)</strong> are the main parts of the solutions that I worked lately. And also <strong>cloud native platforms and technologies</strong> are in my toolbox. I have been providing suitable and required features within cloud native solutions.
 
 Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...etc.</strong> But as an engineer, I try to involve in every technology which I can create a solution. For desired quality criteria, I always think about alternatives.
             `;
@@ -104,7 +104,7 @@ Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...et
         } else if(what ==="other"){
             return `<strong class="h5">Other</strong> - Beside these “geek” topics, I like to travel and to explore new places. I like getting to know new people and share experiences. <strong>Listening music ( \\m/ )</strong> takes up a big space in my life. Because of the inner child, I still like doing new things with <strong>“LEGO”</strong>. And sailing is a fun breeze in my life. Maybe I am not a good sport player, but I like playing <strong>basketball</strong>. and following <strong>basketball events</strong>.`
         } else if(what ==="work"){
-            return `<strong class="h5">Currently</strong> - Working at <strong><a href="https://www.qliro.com/" target="_blank"><img src="assets/images/companies/qliro.png" width="15%" ></a></strong> as consultant from <strong><a href="https://www.swedq.se" target="_blank"><img src="assets/images/companies/swedq.png" width="12%" ></a></strong>.`
+            return `<strong class="h5">Currently</strong> - Since October 2022, working at <strong><a href="https://www.qliro.com/" target="_blank"><img src="assets/images/companies/qliro.png" width="15%" alt="Qliro"></a></strong> as a consultant from <strong><a href="https://www.swedq.se" target="_blank" alt="SwedQ"><img src="assets/images/companies/swedq.png" width="12%" ></a></strong>.`
         }
 
         return ``;
