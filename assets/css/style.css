@@ -6,6 +6,8 @@ Version:	1.0
 /*	RESET
 /*-----------------------------------------------------------------------------------*/
 :root {
+    --color-light: #fff;
+    --color-bg: #f3f3f3;
     --color-copy: #808080;
     --color-default: #a7a7a7;
     --color-muted: #a7a7a7;
@@ -13,9 +15,32 @@ Version:	1.0
     --color-border: rgba(0, 0, 0, 0.05);
     --color-border-strong: rgba(0, 0, 0, 0.1);
     --shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.08);
+    --color-brand: rgba(0, 0, 0, 0.05);
+    --color-progress: #e9ecef;
     --input-padding-x: 1rem;
     --input-padding-y: 0.5rem;
+    --inverted: 0;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-light: #222; /* Adjusted to a slightly off-white for readability */
+        --color-bg: #121212; /* Dark background */
+        --color-copy: #b3b3b3; /* Lighter gray for text */
+        --color-default: #cccccc; /* Default text color */
+        --color-muted: #888888; /* Muted text color */
+        --color-dark: #ffffff; /* Light color for text */
+        --color-border: rgba(255, 255, 255, 0.1); /* Light border for contrast */
+        --color-border-strong: rgba(255, 255, 255, 0.2); /* Stronger border */
+        --shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.8); /* Darker shadow for depth */
+        --color-brand: rgba(255, 255, 255, 0.05);
+        --color-progress: rgba(255, 255, 255, 0.3);
+        --input-padding-x: 1rem;
+        --input-padding-y: 0.5rem;
+        --inverted: 1;
+    }
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	GENERAL
@@ -32,7 +57,7 @@ body {
     font-size: 0.7rem;
     letter-spacing: 0.02rem;
     font-weight: 400;
-    background: #f3f3f3;
+    background: var(--color-bg);
     overflow-x: hidden;
     position: relative;
 
@@ -268,6 +293,7 @@ ul.nav.nav-tabs .nav-link.active {
     border: 0;
     border-radius: 0.2rem;
     box-shadow: var(--shadow);
+    background-color: var(--color-light);
 }
 
 main>.card {
@@ -281,7 +307,7 @@ main>.card {
 
 .card-header,
 .card-footer {
-    background: #FFF;
+    background: var(--color-light);
     padding: 0.50rem 1.25rem;
     line-height: 1;
     border-color: var(--color-border) !important;
@@ -312,7 +338,7 @@ header .profile figure {
     width: 6rem;
     height: 6rem;
     border-radius: 100%;
-    background-color: #FFF;
+    background-color: var(--color-light);
     box-shadow: var(--shadow);
 }
 
@@ -329,7 +355,7 @@ header .profile figure span {
 /*-----------------------------------------------------------------------------------*/
 .grid .brand {
     width: 100%;
-    background: rgba(0, 0, 0, 0.05);
+    background: var(--color-brand);
     padding: 0 3rem;
     margin-bottom: 0.75rem;
     height: 1.9rem;
@@ -344,12 +370,19 @@ header .profile figure span {
 
 .grid .brand figure img {
     width: auto;
-    height: 1rem;
+    height: 1.2rem;
     margin: 0;
     padding: 0;
     line-height: 1;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+}
+
+.img-big img {
+    height: 2.5rem !important;
+    width: auto !important;
+}
+
+.brand-img {
+    filter: grayscale(100%) invert(var(--inverted));
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -531,7 +564,7 @@ figure img {
     }
 
     header nav {
-        background: #FFF;
+        background: var(--color-light);
         border-radius: 0.2rem;
         padding: 0 1.25rem;
         box-shadow: var(--shadow);
@@ -573,4 +606,8 @@ figure img {
     margin: 0 !important;
     padding: 0 !important;
     list-style: none;
+}
+
+.progress {
+    background-color: var(--color-progress);
 }
