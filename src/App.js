@@ -38,7 +38,7 @@ class App extends Component {
     const work = await this.dataService.getAbout("work");
     const skills = await this.dataService.getSkilss();
 
-    document.title = "Arda Cetinkaya | Software Engineer @Stockholm, Sweden";
+    document.title = DataService.ME;
 
     this.setState({
       socialAddresses: socialAddresses,
@@ -62,10 +62,10 @@ class App extends Component {
     if (this.state.currentPage === "about") {
       return (<About me={this.state.me} education={this.state.education} other={this.state.other} work={this.state.work}  />)
     } else if (this.state.currentPage === "experience") {
-      return (<Experience data={this.state.experience} url="https://www.linkedin.com/in/ardacetinkaya/"/>)
+      return (<Experience data={this.state.experience} url={DataService.MY_LINKEDIN_PAGE}/>)
     } else if (this.state.currentPage === "blog") {
       var blogPosts = this.dataService.getBlogPosts("");
-      return (<Blog url={"https://www.minepla.net"} articles={[]} />)
+      return (<Blog url={DataService.MY_BLOG} articles={[]} />)
     } else if (this.state.currentPage === "skills") {
       return (<Skills data={this.state.skills}/>)
     } else if (this.state.currentPage === "contact") {
@@ -87,13 +87,13 @@ class App extends Component {
           <header className="col-lg-2 mb-30 mb-lg-0">
             <div className="row gx-0 gy-20 gy-lg-0">
               <div className="col-5 col-lg-12 order-0 order-lg-1">
-                <h1 className="site-title h4">{this.state.loading ? '' : 'Arda Cetinkaya'}</h1>
-                <p className="small text-muted lh-lg mb-0">Software Engineer <br /> @Stockholm, Sweden</p>
+                <h1 className="site-title h4">{this.state.loading ? '' : DataService.MY_NAME}</h1>
+                <p className="small text-muted lh-lg mb-0">{DataService.MY_OCCUPATION} <br /> @{DataService.MY_LOCATION}</p>
               </div>
               <div className="col-2 col-lg-12 profile order-1 order-lg-0">
                 <figure className="hover hover-lift">
                   <a href="/" onClick={() => this.onMenuClick("")}>
-                  <span style={{backgroundImage: `url(assets/images/profile/me_01.jpeg)`,backgroundSize: "cover"}}></span>
+                  <span style={{backgroundImage: `url(${DataService.MY_PHOTO})`,backgroundSize: "cover"}}></span>
                   </a>
                 </figure>
               </div>

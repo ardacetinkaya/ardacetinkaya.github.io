@@ -22,12 +22,14 @@ class About extends Component {
                 </ul>
                 <div className="tab-content">
                     <div className="tab-pane fade show active" id="bio" role="tabpanel" aria-labelledby="bio-tab">
-                        <p style={{whiteSpace: "pre-line"}} dangerouslySetInnerHTML={{ __html: me }}></p>
-                        <hr></hr>
-                        <p style={{whiteSpace: "pre-line"}} dangerouslySetInnerHTML={{ __html: work }}></p>
-                        <hr></hr>
-                        <p style={{whiteSpace: "pre-line"}} dangerouslySetInnerHTML={{ __html: education }}></p>
-                        <p style={{whiteSpace: "pre-line"}} dangerouslySetInnerHTML={{ __html: other }}></p>
+                        <article>
+                            <section><p style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: me }}></p></section>
+                            <hr></hr>
+                            <section><p style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: work }}></p></section>
+                            <hr></hr>
+                            <section><p style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: education }}></p></section>
+                            <section><p style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: other }}></p></section>
+                        </article>
                     </div>
                 </div>
             </div>

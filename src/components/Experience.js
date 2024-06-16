@@ -5,13 +5,14 @@ import React, { Component } from "react";
 class Experience extends Component {
 
     renderExperiences = (experiences) => {
-        var content="";
+        var content = "";
         if (experiences) {
             content = experiences.filter(f => true).map((experience, index) => {
+                var className = index === 0 ? "item col-md-12 img-big" : "item col-md-6";
                 return (
-                    <div key={index} className="item col-md-6">
+                    <div key={index} className={className}>
                         <div className="brand">
-                            <figure><img src={experience.logo} alt={experience.name} /></figure>
+                            <figure><img src={experience.logo} alt={experience.name} className="brand-img" /></figure>
                         </div>
                         <p>
                             <div className="d-flex flex-row">
@@ -26,7 +27,7 @@ class Experience extends Component {
                         </p>
                     </div>)
             });
-        } 
+        }
         return content;
     }
 
@@ -41,6 +42,9 @@ class Experience extends Component {
                 </div>
             </div>
             <div className="card-body grid grid-view">
+                <div className="row gx-md-25 gy-15 isotope text-right mr-5 mt-5">
+                    <a className="btn text-right pr-5" href={this.props.url} target="_blank" rel="noopener noreferrer">All experiences</a>
+                </div>
                 <div className="row gx-md-25 gy-15 isotope mt-0">
                     {this.renderExperiences(this.props.data)}
                 </div>

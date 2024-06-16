@@ -3,6 +3,14 @@ import axios from "axios";
 
 export default class DataService {
 
+    static ME = "Arda Cetinkaya | Software Engineer @Stockholm, Sweden";
+    static MY_NAME = "Arda Cetinkaya";
+    static MY_PHOTO = "assets/images/profile/me_02.jpeg";
+    static MY_LOCATION = "Stockholm, Sweden";
+    static MY_OCCUPATION = "Software Engineer";
+    static MY_BLOG = "https://www.minepla.net";
+    static MY_LINKEDIN_PAGE = "https://www.linkedin.com/in/ardacetinkaya/";
+
     getBlogPosts = async (rssURL) => {
         var posts = [];
         if (rssURL) {
@@ -44,6 +52,18 @@ export default class DataService {
         if(what=== "experience")
         {
             return [
+                {
+                    name:"Qliro",
+                    logo:"assets/images/companies/qliro.png",
+                    location:"Stockholm, Sweden",
+                    url:"https://www.qliro.se",
+                    title:"Senior Software Engineer",
+                    description:"- Responsible for implementation and design of a new unified payment solution for merchants who are willing to be in e-commerence market with different payment methods" 
+                    + "<br />- Event-driven, scalable, resilent workloads implementation with latest .NET Platforms technology stack."
+                    + "<br />- Cloud-driven solution implementation and management on AWS with wide-range of resources like; Lambda, QLDB,"
+                    + " ECS, Cloudwatch, DynamoDB, VPC, SNS, SQS, S3, Batch, with Terraform"
+                    + "<br />- Also involved on company wide business and techical initiatives"
+                },
                 {
                     name:"VeriPark",
                     logo:"assets/images/companies/veripark.svg",
@@ -91,20 +111,22 @@ export default class DataService {
             return `<strong className="h5">Hej</strong>,
              I’m Arda… I am a software developer; I solve complicated problems in a way that computers can understand so then they provide solutions to <strong>empower people</strong>. Also I help developers to <strong>do their best</strong>. 
             
-I do analyze, think about the suitable architecture and then implement the necessary approaches. And of course, I do <strong>write “code”</strong>. As I have <strong>passion learning new things</strong>, I always have fun to keep my self up to date.  I have been doing these things for +15 years with a great passion. I did the right and best mistakes… I merge lessons from these mistakes with my experience to provide best solutions. 
+I do analyze, think about the suitable architecture and then implement the necessary approaches. And of course, I do <strong>write “code”</strong>. As I have <strong>passion learning new things</strong>, I always have fun to keep my self up to date.  I have been doing these things for 18 years with a great passion. I did the right and best mistakes… I merge lessons from these mistakes with my experience to provide best solutions. 
 
 So far, <strong>distributed systems, service oriented applications</strong> and enterprise level applications are the main solutions which I am involved in. I try to <strong>contribute all stages of development life-cycle</strong> to create valued and quality solutions. <strong>Software development principles, architectural patterns and agile methodologies</strong> are main topics which I focus in my solutions. I do question deeply on these topics to find most suitable implementation.
 
 <strong>Cloud platforms(Azure, AWS)</strong> are the main parts of the solutions that I worked lately. And also <strong>cloud native platforms and technologies</strong> are in my toolbox. I have been providing suitable and required features within cloud native solutions.
 
 Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...etc.</strong> But as an engineer, I try to involve in every technology which I can create a solution. For desired quality criteria, I always think about alternatives.
-            `;
+`;
         } else if(what ==="education"){
             return `<strong className="h5">Education</strong> - Çankaya Üniversitesi, Turkey - BS, Computer Engineering @ 2002 - 2006`;
         } else if(what ==="other"){
-            return `<strong className="h5">Other</strong> - Beside these “geek” topics, I like to travel and to explore new places. I like getting to know new people and share experiences. <strong>Listening music ( \\m/ )</strong> takes up a big space in my life. Because of the inner child, I still like doing new things with <strong>“LEGO”</strong>. And sailing is a fun breeze in my life. Maybe I am not a good sport player, but I like playing <strong>basketball</strong>. and following <strong>basketball events</strong>.`
+            return `<strong className="h5">Other</strong> - Beside these “geek” topics, I like to travel and to explore new places. I like getting to know new people and share experiences. <strong>Listening music ( \\m/ )</strong> takes up a big space in my life. Because of the inner child, I still like doing new things with <strong>“LEGO”</strong>. And sailing is a fun breeze in my life. Maybe I am not a good sport player, but I like playing <strong>basketball</strong>. and following <strong>basketball events</strong>.
+            
+            I also write blog posts to share my experiences. Have a look at <strong><a href="https://www.minepla.net" target="_blank">https://www.minepla.net</a></strong>`;
         } else if(what ==="work"){
-            return `<strong className="h5">Currently</strong> - Since October 2022, working at <strong><a href="https://www.qliro.com/" target="_blank"><img src="assets/images/companies/qliro.png" width="15%" alt="Qliro"></a></strong> as a consultant from <strong><a href="https://www.swedq.se" target="_blank" alt="SwedQ"><img src="assets/images/companies/swedq.png" width="12%" ></a></strong>.`
+            return `<strong className="h5">Currently</strong> - Since October 2022, working at <strong><a href="https://www.qliro.com/" target="_blank"><img src="assets/images/companies/qliro.png" class="brand-img" width="15%" alt="Qliro"></a></strong> as a consultant from <strong><a href="https://www.swedq.se" target="_blank" alt="SwedQ"><img src="assets/images/companies/swedq.png" class="brand-img" width="12%" ></a></strong>.`;
         }
 
         return ``;

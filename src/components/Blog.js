@@ -39,7 +39,7 @@ class Blog extends Component {
           {this.renderArticles(articles)}
         </div>
         <div className="row gx-md-25 gy-15 isotope text-right mr-5 mt-5">
-          <a className="btn text-right pr-5" href={url} target="_blank" rel="noopener noreferrer">All other posts</a>
+          <a className="btn text-right pr-5" href={url} target="_blank" rel="noopener noreferrer">All blog posts</a>
         </div>
       </div>
     </div>);
