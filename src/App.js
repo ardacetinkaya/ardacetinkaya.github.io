@@ -39,8 +39,6 @@ class App extends Component {
     const skills = await this.dataService.getSkilss();
 
     document.title = "Arda Cetinkaya | Software Engineer @Stockholm, Sweden";
-    const blogPosts = await this.dataService.getBlogPosts("https://www.minepla.net/feed/");
-    const blogURL = "https://www.minepla.net";
 
     this.setState({
       socialAddresses: socialAddresses,
@@ -50,8 +48,6 @@ class App extends Component {
       other: other,
       work: work,
       skills: skills,
-      blogPosts: blogPosts,
-      blogURL:blogURL,
       loading: false
     });
   }
@@ -68,7 +64,8 @@ class App extends Component {
     } else if (this.state.currentPage === "experience") {
       return (<Experience data={this.state.experience} url="https://www.linkedin.com/in/ardacetinkaya/"/>)
     } else if (this.state.currentPage === "blog") {
-      return (<Blog url={this.state.blogURL} articles={this.state.blogPosts} />)
+      var blogPosts = this.dataService.getBlogPosts("");
+      return (<Blog url={"https://www.minepla.net"} articles={[]} />)
     } else if (this.state.currentPage === "skills") {
       return (<Skills data={this.state.skills}/>)
     } else if (this.state.currentPage === "contact") {
@@ -91,7 +88,7 @@ class App extends Component {
             <div className="row gx-0 gy-20 gy-lg-0">
               <div className="col-5 col-lg-12 order-0 order-lg-1">
                 <h1 className="site-title h4">{this.state.loading ? '' : 'Arda Cetinkaya'}</h1>
-                <p class="small text-muted lh-lg mb-0">Software Engineer <br /> @Stockholm, Sweden</p>
+                <p className="small text-muted lh-lg mb-0">Software Engineer <br /> @Stockholm, Sweden</p>
               </div>
               <div className="col-2 col-lg-12 profile order-1 order-lg-0">
                 <figure className="hover hover-lift">

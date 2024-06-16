@@ -16,12 +16,12 @@ class Experience extends Component {
                         <p>
                             <div className="d-flex flex-row">
                                 <div className="mr-auto">
-                                    <strong><a href={experience.url} target="_blank" rel="noopener noreferrer">{experience.name}</a></strong><span class="small text-muted lh-lg mb-0"> @ {experience.location}</span>
-                                    <p class="small text-muted lh-lg">{experience.title}</p>
+                                    <strong><a href={experience.url} target="_blank" rel="noopener noreferrer">{experience.name}</a></strong><span className="small text-muted lh-lg mb-0"> @ {experience.location}</span>
+                                    <p className="small text-muted lh-lg">{experience.title}</p>
                                 </div>
                             </div>
                             <div className="d-flex justify-content">
-                                <p class="small  lh-lg" dangerouslySetInnerHTML={{ __html: experience.description }}></p>
+                                <p className="small  lh-lg" dangerouslySetInnerHTML={{ __html: experience.description }}></p>
                             </div>
                         </p>
                     </div>)

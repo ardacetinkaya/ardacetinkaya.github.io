@@ -88,7 +88,7 @@ export default class DataService {
                 }
             ]
         } else if (what ==="me") {
-            return `<strong class="h5">Hej</strong>,
+            return `<strong className="h5">Hej</strong>,
              I’m Arda… I am a software developer; I solve complicated problems in a way that computers can understand so then they provide solutions to <strong>empower people</strong>. Also I help developers to <strong>do their best</strong>. 
             
 I do analyze, think about the suitable architecture and then implement the necessary approaches. And of course, I do <strong>write “code”</strong>. As I have <strong>passion learning new things</strong>, I always have fun to keep my self up to date.  I have been doing these things for +15 years with a great passion. I did the right and best mistakes… I merge lessons from these mistakes with my experience to provide best solutions. 
@@ -100,11 +100,11 @@ So far, <strong>distributed systems, service oriented applications</strong> and 
 Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...etc.</strong> But as an engineer, I try to involve in every technology which I can create a solution. For desired quality criteria, I always think about alternatives.
             `;
         } else if(what ==="education"){
-            return `<strong class="h5">Education</strong> - Çankaya Üniversitesi, Turkey - BS, Computer Engineering @ 2002 - 2006`;
+            return `<strong className="h5">Education</strong> - Çankaya Üniversitesi, Turkey - BS, Computer Engineering @ 2002 - 2006`;
         } else if(what ==="other"){
-            return `<strong class="h5">Other</strong> - Beside these “geek” topics, I like to travel and to explore new places. I like getting to know new people and share experiences. <strong>Listening music ( \\m/ )</strong> takes up a big space in my life. Because of the inner child, I still like doing new things with <strong>“LEGO”</strong>. And sailing is a fun breeze in my life. Maybe I am not a good sport player, but I like playing <strong>basketball</strong>. and following <strong>basketball events</strong>.`
+            return `<strong className="h5">Other</strong> - Beside these “geek” topics, I like to travel and to explore new places. I like getting to know new people and share experiences. <strong>Listening music ( \\m/ )</strong> takes up a big space in my life. Because of the inner child, I still like doing new things with <strong>“LEGO”</strong>. And sailing is a fun breeze in my life. Maybe I am not a good sport player, but I like playing <strong>basketball</strong>. and following <strong>basketball events</strong>.`
         } else if(what ==="work"){
-            return `<strong class="h5">Currently</strong> - Since October 2022, working at <strong><a href="https://www.qliro.com/" target="_blank"><img src="assets/images/companies/qliro.png" width="15%" alt="Qliro"></a></strong> as a consultant from <strong><a href="https://www.swedq.se" target="_blank" alt="SwedQ"><img src="assets/images/companies/swedq.png" width="12%" ></a></strong>.`
+            return `<strong className="h5">Currently</strong> - Since October 2022, working at <strong><a href="https://www.qliro.com/" target="_blank"><img src="assets/images/companies/qliro.png" width="15%" alt="Qliro"></a></strong> as a consultant from <strong><a href="https://www.swedq.se" target="_blank" alt="SwedQ"><img src="assets/images/companies/swedq.png" width="12%" ></a></strong>.`
         }
 
         return ``;

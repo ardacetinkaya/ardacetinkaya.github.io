@@ -11,7 +11,7 @@ class Skills extends Component {
                return(
                     <li key={index} className="mb-15">
                         <p className="mb-0">{skill.name}</p>
-                        <div class="progress plain" style={{width:`${skill.level}%`}} />
+                        <div className="progress plain" style={{width:`${skill.level}%`}} />
                     </li>    
                );
             });
@@ -24,8 +24,8 @@ class Skills extends Component {
             </div>
             `;
         return (
-            <div class="col-sm-4">
-                <ul class="progress-list">
+            <div className="col-sm-4">
+                <ul className="progress-list">
                     {content}
             
                     
