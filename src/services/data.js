@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import xml2js from 'xml2js';
 
 export default class DataService {
 
@@ -11,16 +11,21 @@ export default class DataService {
     static MY_BLOG = "https://www.minepla.net";
     static MY_LINKEDIN_PAGE = "https://www.linkedin.com/in/ardacetinkaya/";
 
-    getBlogPosts = async (rssURL) => {
-        var posts = [];
-        if (rssURL) {
-            posts = axios.get(`https://api.rss2json.com/v1/api.json?rss_url=${rssURL}`)
-                .then(res => {
-                    var posts = res.data.items;
-                    return posts;
-                });
+    parseRSSFeed = async () => {
+        const feedUrl = "https://www.minepla.net/feed/";
+        try {
+            const response = await axios.get(feedUrl);
+            const feed = await xml2js.parseStringPromise(response.data, {trim: true, explicitArray: false});
+            return feed.rss.channel.item.map(item => ({
+                title: item.title,
+                description: item.description.substring(0, 140),
+                link: item.link,
+                pubDate: item.pubDate
+            }));
+        } catch (error) {
+            console.error("Error fetching or parsing RSS feed:", error);
+            return [];
         }
-        return posts;
     }
 
     getSocial = async () => {
@@ -254,4 +259,3 @@ Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...et
         ]
     }
 }
-
