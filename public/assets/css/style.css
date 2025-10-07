@@ -609,5 +609,6 @@ figure img {
 }
 
 .progress {
+    height: 0.5rem;
     background-color: var(--color-progress);
 }

@@ -4,7 +4,7 @@ class Blog extends Component {
 
   renderArticles = (articles) => {
 
-    return articles.slice(0, 6).map((article, index) => {
+    return articles.slice(0, 9).map((article, index) => {
       const date = new Date(article.pubDate);
       var options = { year: 'numeric', month: 'long', day: 'numeric' };
       return (

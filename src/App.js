@@ -36,7 +36,8 @@ class App extends Component {
     const education = await this.dataService.getAbout("education");
     const other = await this.dataService.getAbout("other");
     const work = await this.dataService.getAbout("work");
-    const skills = await this.dataService.getSkilss();
+    const skills = await this.dataService.getSkils();
+    const blogs = await this.dataService.getBlogPosts("https://www.minepla.net/feed/");
 
     document.title = DataService.ME;
 
@@ -48,6 +49,7 @@ class App extends Component {
       other: other,
       work: work,
       skills: skills,
+      blogs: blogs,
       loading: false
     });
   }
@@ -64,8 +66,7 @@ class App extends Component {
     } else if (this.state.currentPage === "experience") {
       return (<Experience data={this.state.experience} url={DataService.MY_LINKEDIN_PAGE}/>)
     } else if (this.state.currentPage === "blog") {
-      var blogPosts = this.dataService.getBlogPosts("");
-      return (<Blog url={DataService.MY_BLOG} articles={[]} />)
+      return (<Blog url={DataService.MY_BLOG} articles={this.state.blogs} />)
     } else if (this.state.currentPage === "skills") {
       return (<Skills data={this.state.skills}/>)
     } else if (this.state.currentPage === "contact") {

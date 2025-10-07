@@ -126,130 +126,88 @@ Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...et
             
             I also write blog posts to share my experiences. Have a look at <strong><a href="https://www.minepla.net" target="_blank">https://www.minepla.net</a></strong>`;
         } else if(what ==="work"){
-            return `<strong className="h5">Currently</strong> - Since October 2022, working at <strong><a href="https://www.qliro.com/" target="_blank"><img src="assets/images/companies/qliro.png" class="brand-img" width="15%" alt="Qliro"></a></strong> as a consultant from <strong><a href="https://www.swedq.se" target="_blank" alt="SwedQ"><img src="assets/images/companies/swedq.png" class="brand-img" width="12%" ></a></strong>.`;
+            return `<strong className="h5">Currently</strong> - Since October 2022, working at <strong><a href="https://www.qliro.com/" target="_blank"><img src="assets/images/companies/qliro.png" class="brand-img" width="15%" alt="Qliro"></a></strong> as a consultant from <strong><a href="https://swedq.se" target="_blank" alt="SwedQ"><img src="assets/images/companies/swedq.png" class="brand-img" width="12%" ></a></strong>.`;
         }
 
         return ``;
     }
 
-    getSkilss = async()=>{
+    getSkils = async()=>{
         return [
             {
-                name:"C#",
-                level:96
-            },
-            {
-                name:".NET Platform",
-                level:90
-            },
-            {
-                name:"Javascript",
-                level:80
-            },
+                category: "Programming Languages & Frameworks",
+                skills: [
+                    { name: "C#", level: 96 },
+                    { name: ".NET Platform", level: 90 },
+                    { name: "ASP.NET Core (MVC, Web API, Razor, Blazor)", level: 94 },
+                    { name: "JavaScript", level: 80 },
+                    { name: "React", level: 69 },
+                    { name: "Node.js", level: 75 },
+                    { name: "Python", level: 25 },
+                    { name: "WPF", level: 55 },
+                    { name: "UI (HTML, CSS, Bootstrap)", level: 69 }
 
-            {
-                name:"ASP.NET Core (MVC, Web API, Razor, Blazor)",
-                level:94
+                ]
             },
             {
-                name:"Python",
-                level:25
+                category: "Cloud",
+                skills: [
+                    { name: "Azure", level: 94 },
+                    { name: "AWS", level: 80 },
+                    { name: "Docker", level: 85 },
+                    { name: "Cloud Native Platforms (Kubernetes, OpenShift)", level: 78 },
+                    { name: "Infrastructure as Code (Terraform)", level: 87 },
+                    { name: "Powershell/Bash", level: 69 }
+                ]
             },
             {
-                name:"Software Development Principles",
-                level:89
+                category: "Architecture & Development Practices",
+                skills: [
+                    { name: "Software Development Principles", level: 94 },
+                    { name: "Distributed Systems (SOA, Microservices, Messaging/Event Systems)", level: 85 },
+                    { name: "Agile Methodologies (SCRUM, Kanban)", level: 80 },
+                    { name: "Domain-Driven Design", level: 87 },
+                    { name: "Object-oriented programming (SOLID Principles)", level: 96 },
+                    { name: "Test-Driven Development(TDD, Unit Tests, SpecFlow)", level: 77 },
+                    { name: "Inter-service communication (REST, gRPC, WebSockets)", level: 90 }
+                ]
             },
             {
-                name:"Agile Methodologies (SCRUM, Kanban)",
-                level:80
+                category: "Databases & Storage",
+                skills: [
+                    { name: "MS SQL", level: 90 },
+                    { name: "PostgreSQL", level: 50 },
+                    { name: "NoSQL (MongoDB, CosmosDB)", level: 80 },
+                    { name: "Caching (Redis)", level: 70 },
+                    { name: "Data Migration & ETL", level: 40 }
+                ]
             },
             {
-                name:"Azure Cloud Platform",
-                level:90
+                category: "CI/CD",
+                skills: [
+                    { name: "Version Control (Git, GitHub, GitLab)", level: 87 },
+                    { name: "Azure DevOps", level: 90 },
+                    { name: "ArgoCD", level: 80 },
+                    { name: "Tekton", level: 77 },
+                    { name: "GitHub Actions", level: 84 },
+                ]
             },
             {
-                name:"AWS",
-                level:75
+                category: "Monitoring & Observability",
+                skills: [
+                    { name: "OpenTelemetry", level: 90 },
+                    { name: "Grafana", level: 86 },
+                    { name: "Elasticsearch", level: 75 },
+                    { name: "Prometheus", level: 80 },
+                ]
             },
             {
-                name:"DevOps Principles(Azure, GitLab)",
-                level:94
-            },
-            {
-                name:"Jaeger",
-                level:86
-            },
-            {
-                name:"Distributed Systems (SOA, microservices, Messaging Systems)",
-                level:85
-            },
-            {
-                name:"T-SQL",
-                level:80
-            },
-            {
-                name:"node.js",
-                level:55
-            },
-            {
-                name:"Cache Management(Redis)",
-                level:50
-            },
-            {
-                name:"No-SQL (MongoDB, CosmosDB)",
-                level:70
-            },
-            {
-                name:"Docker",
-                level:76
-            },
-            {
-                name:"Cloud Native Platforms (Kubernetes, RedHat OpenShift)",
-                level:60
-            },
-            {
-                name:"UI (HTML, CSS, Bootstrap)",
-                level:69
-            },
-            {
-                name:"Mobile (React Native)",
-                level:45
-            },
-            {
-                name:"Infrastructure as Code (Terraform)",
-                level:85
-            },
-            {
-                name:"Microsoft Power Platform (Power BI, Power Apps)",
-                level:50
-            },
-            {
-                name:"Git",
-                level:70
-            },
-            {
-                name:"Messaging systems (RabbitMQ)",
-                level:65
-            },
-            {
-                name:"Object-oriented programming (SOLID Principles)",
-                level:96
-            },
-            {
-                name:"Powershell/Bash",
-                level:69
-            },
-            {
-                name:"Prometheus",
-                level:80
-            },
-            {
-                name:"OpenTelemetry",
-                level:90
-            },
-            {
-                name:"ElasticSearch",
-                level:70
+                category: "Frontend & Other Technologies",
+                skills: [
+                    
+                    { name: "Mobile (React Native)", level: 45 },
+                    { name: "Microsoft Power Platform (Power BI, Power Apps)", level: 50 }
+                ]
             }
         ]
     }
