@@ -18,6 +18,7 @@ class Experience extends Component {
                             <div className="d-flex flex-row">
                                 <div className="mr-auto">
                                     <strong><a href={experience.url} target="_blank" rel="noopener noreferrer">{experience.name}</a></strong><span className="small text-muted lh-lg mb-0"> @ {experience.location}</span>
+                                    <p className="small text-muted lh-lg mb-0">{experience.when}</p>
                                     <p className="small text-muted lh-lg">{experience.title}</p>
                                 </div>
                             </div>

@@ -20,7 +20,6 @@ class App extends Component {
       experience: null,
       education: null,
       skills: null,
-      blogs: [],
       repos: null,
       loading: true,
     };
@@ -34,10 +33,10 @@ class App extends Component {
     const me = await this.dataService.getAbout("me");
     const experience = await this.dataService.getAbout("experience");
     const education = await this.dataService.getAbout("education");
+    const certifications = await this.dataService.getAbout("certifications");
     const other = await this.dataService.getAbout("other");
     const work = await this.dataService.getAbout("work");
     const skills = await this.dataService.getSkils();
-    const blogs = await this.dataService.getBlogPosts("https://www.minepla.net/feed/");
 
     document.title = DataService.ME;
 
@@ -46,10 +45,10 @@ class App extends Component {
       me: me,
       experience: experience,
       education: education,
+      certifications: certifications,
       other: other,
       work: work,
       skills: skills,
-      blogs: blogs,
       loading: false
     });
   }
@@ -62,11 +61,11 @@ class App extends Component {
 
   renderMain = () => {
     if (this.state.currentPage === "about") {
-      return (<About me={this.state.me} education={this.state.education} other={this.state.other} work={this.state.work}  />)
+      return (<About me={this.state.me} education={this.state.education} other={this.state.other} work={this.state.work} certifications={this.state.certifications} />)
     } else if (this.state.currentPage === "experience") {
       return (<Experience data={this.state.experience} url={DataService.MY_LINKEDIN_PAGE}/>)
     } else if (this.state.currentPage === "blog") {
-      return (<Blog url={DataService.MY_BLOG} articles={this.state.blogs} />)
+      return (<Blog url={DataService.MY_BLOG} />)
     } else if (this.state.currentPage === "skills") {
       return (<Skills data={this.state.skills}/>)
     } else if (this.state.currentPage === "contact") {

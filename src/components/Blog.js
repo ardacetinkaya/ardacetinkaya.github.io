@@ -1,9 +1,25 @@
 import React, { Component } from "react";
+import DataService from "../services/data";
 
 class Blog extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      articles: [],
+      loading: true
+    };
+    this.dataService = new DataService();
+  }
+
+  componentDidMount = async () => {
+    const blogs = await this.dataService.getBlogPosts("https://www.minepla.net/feed/");
+    this.setState({
+      articles: blogs,
+      loading: false
+    });
+  }
 
   renderArticles = (articles) => {
-
     return articles.slice(0, 9).map((article, index) => {
       const date = new Date(article.pubDate);
       var options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -24,7 +40,7 @@ class Blog extends Component {
   }
 
   render() {
-    const articles = this.props.articles;
+    const { articles, loading } = this.state;
     const url = this.props.url;
     return (<div className="card">
       <div className="card-header">
@@ -35,12 +51,22 @@ class Blog extends Component {
         </div>
       </div>
       <div className="card-body grid grid-view">
-        <div className="row gx-md-25 gy-15 isotope">
-          {this.renderArticles(articles)}
-        </div>
-        <div className="row gx-md-25 gy-15 isotope text-right mr-5 mt-5">
-          <a className="btn text-right pr-5" href={url} target="_blank" rel="noopener noreferrer">All blog posts</a>
-        </div>
+        {loading ? (
+          <div className="text-center p-5">
+            <div className="spinner-grow" role="status">
+              <span className="sr-only">Loading blog posts...</span>
+            </div>
+          </div>
+        ) : (
+          <>
+            <div className="row gx-md-25 gy-15 isotope">
+              {this.renderArticles(articles)}
+            </div>
+            <div className="row gx-md-25 gy-15 isotope text-right mr-5 mt-5">
+              <a className="btn text-right pr-5" href={url} target="_blank" rel="noopener noreferrer">All blog posts</a>
+            </div>
+          </>
+        )}
       </div>
     </div>);
   }
