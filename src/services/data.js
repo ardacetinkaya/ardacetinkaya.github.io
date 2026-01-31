@@ -55,6 +55,7 @@ export default class DataService {
                 {
                     name:"Qliro",
                     logo:"assets/images/companies/qliro.png",
+                    when: "October 2022 - October 2025",
                     location:"Stockholm, Sweden",
                     url:"https://www.qliro.se",
                     title:"Senior Software Engineer",
@@ -68,6 +69,7 @@ export default class DataService {
                     name:"VeriPark",
                     logo:"assets/images/companies/veripark.svg",
                     location:"Istanbul, Turkey",
+                    when: "April 2021 - August 2022",
                     url:"https://www.veripark.com",
                     title:"Cloud Solution Architect",
                     description:"- Secure, cost-efficient and reliable cloud designs on Microsoft Azure for business critical financial solutions." 
@@ -79,6 +81,7 @@ export default class DataService {
                     name:"Fineksus",
                     logo:"assets/images/companies/fineksus.png",
                     location:"Istanbul, Turkey",
+                    when: "August 2008 - May 2013, November 2016 - February 2018",
                     url:"https://www.fineksus.com",
                     title:"Software Architect, R&D and Development Team Supervisor",
                     description: "- Responsible for designing and implementing an application framework for the financial application product suit which includes applications for management, monitoring and reporting SWIFT transactions, AML and fraud prevention."
@@ -90,6 +93,7 @@ export default class DataService {
                     name:"Garanti BBVA",
                     logo:"assets/images/companies/garantibbva.svg",
                     location:"Istanbul, Turkey",
+                    when: "May 2013 - November 2016",
                     url:"https://www.garantibbvateknoloji.com.tr",
                     title:"Senior Software Development Specialist",
                     description: "- Responsible for architectural design and implementation of a service and process management system which has a huge domain context for lots of internal and external stakeholders."
@@ -99,6 +103,7 @@ export default class DataService {
                     name:"Doğuş Teknoloji",
                     logo:"assets/images/companies/dteknoloji.png",
                     location:"Istanbul, Turkey",
+                    when: "February 2018 - October 2018",
                     url:"https://www.d-teknoloji.com.tr/",
                     title:"Software Development Manager",
                     description: "- Responsible to manage delivery of business requirements of an business critical ERP system."
@@ -121,13 +126,13 @@ Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...et
 `;
         } else if(what ==="education"){
             return `<strong className="h5">Education</strong> - Çankaya Üniversitesi, Turkey - BS, Computer Engineering @ 2002 - 2006`;
+        } else if(what ==="certifications"){
+            return `<strong className="h5">Certifications</strong> - Microsoft Certified: Azure Solutions Architect Expert`;
         } else if(what ==="other"){
-            return `<strong className="h5">Other</strong> - Beside these “geek” topics, I like to travel and to explore new places. I like getting to know new people and share experiences. <strong>Listening music ( \\m/ )</strong> takes up a big space in my life. Because of the inner child, I still like doing new things with <strong>“LEGO”</strong>. And sailing is a fun breeze in my life. Maybe I am not a good sport player, but I like playing <strong>basketball</strong>. and following <strong>basketball events</strong>.
+            return `<strong className="h5">Other</strong> - Beside these “geek” topics, I like to travel and to explore new places. I like getting to know new people and share experiences. <strong>Listening music ( \\m/ )</strong> takes up a big space in my life. Because of the inner child, I still like doing new things with <strong>“LEGO”</strong>. And sailing is a fun breeze in my life. Maybe I am not a good sport player, but I like playing <strong>basketball</strong> and following <strong>basketball games</strong>.
             
             I also write blog posts to share my experiences. Have a look at <strong><a href="https://www.minepla.net" target="_blank">https://www.minepla.net</a></strong>`;
-        } else if(what ==="work"){
-            return `<strong className="h5">Currently</strong> - Since October 2022, working at <strong><a href="https://www.qliro.com/" target="_blank"><img src="assets/images/companies/qliro.png" class="brand-img" width="15%" alt="Qliro"></a></strong> as a consultant from <strong><a href="https://swedq.se" target="_blank" alt="SwedQ"><img src="assets/images/companies/swedq.png" class="brand-img" width="12%" ></a></strong>.`;
-        }
+        } 
 
         return ``;
     }
@@ -176,7 +181,7 @@ Mostly I work with Microsoft technology stack; <strong>.NET Platform, Azure...et
                 category: "Databases & Storage",
                 skills: [
                     { name: "MS SQL", level: 90 },
-                    { name: "PostgreSQL", level: 50 },
+                    { name: "PostgreSQL", level: 67 },
                     { name: "NoSQL (MongoDB, CosmosDB)", level: 80 },
                     { name: "Caching (Redis)", level: 70 },
                     { name: "Data Migration & ETL", level: 40 }

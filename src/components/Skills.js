@@ -47,22 +47,7 @@ class Skills extends Component {
                     </div>
                 </div>
 
-                <div className="card-body">
-                    {/* <div className="d-flex flex-row justify-content-between align-items-center">
-                        <img src="assets/images/dotnet.png" width="50px" alt="" className="align-self-center"></img>
-                        <img src="assets/images/azure.png" width="50px" alt="" className="align-self-center"></img>
-                        <img src="assets/images/csharp.png" width="35px" alt="" className="align-self-center"></img>
-                        <img src="assets/images/docker.png" width="40px" alt="" className="align-self-center"></img>
-                        <img src="assets/images/kubernetes.png" width="70px" alt="" className="align-self-center"></img>
-                        <img src="assets/images/microservices.png" width="90px" alt="" className="align-self-center"></img>
-                        <img src="assets/images/azureDevops.png" width="90px" alt="" className="align-self-center"></img>
-                        <img src="assets/images/openshift.png" width="50px" alt="" className="align-self-center"></img>
-                        <img src="assets/images/sql.png" width="60px" alt="" className="align-self-center"></img>
-                        <img src="assets/images/rabbitmq.png" width="60px" alt="" className="align-self-center"></img>
-                        <img src="assets/images/terraform.png" width="60px" alt="" className="align-self-center"></img>
-                    </div>
-                    <hr></hr> */}
-                    
+                <div className="card-body">                    
                     <div className="skills-masonry-container">
                         {data && data.map(category => this.renderSkillCategory(category))}
                     </div>

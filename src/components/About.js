@@ -6,6 +6,7 @@ class About extends Component {
         const education = this.props.education;
         const other = this.props.other;
         const work = this.props.work;
+        const certifications = this.props.certifications;
         return (<div className="card">
             <div className="card-header">
                 <div className="row gx-0">
@@ -25,9 +26,10 @@ class About extends Component {
                         <article>
                             <section><p style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: me }}></p></section>
                             <hr></hr>
-                            <section><p style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: work }}></p></section>
-                            <hr></hr>
+
                             <section><p style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: education }}></p></section>
+                            <section><p style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: certifications }}></p></section>
+                            <br></br>
                             <section><p style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: other }}></p></section>
                         </article>
                     </div>
