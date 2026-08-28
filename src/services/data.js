@@ -55,15 +55,26 @@ export default class DataService {
                 {
                     name:"Qliro",
                     logo:"assets/images/companies/qliro.png",
-                    when: "October 2022 - October 2025",
+                    when: "October 2022 - October 2025 and February 2026 - Present",
                     location:"Stockholm, Sweden",
                     url:"https://www.qliro.se",
                     title:"Senior Software Engineer",
                     description:"- Responsible for implementation and design of a new unified payment solution for merchants who are willing to be in e-commerence market with different payment methods" 
                     + "<br />- Event-driven, scalable, resilent workloads implementation with latest .NET Platforms technology stack."
-                    + "<br />- Cloud-driven solution implementation and management on AWS with wide-range of resources like; Lambda, QLDB,"
-                    + " ECS, Cloudwatch, DynamoDB, VPC, SNS, SQS, S3, Batch, with Terraform"
+                    + "<br />- Cloud-driven solution implementation and management on AWS with wide-range of resources like; Lambda,"
+                    + " ECS, Cloudwatch, DynamoDB, VPC, RDS(PostgreSQL), SNS, SQS, S3, Batch with Terraform"
+                    + "<br />- MongoDB database design and implementation for high performance and scalable workloads"
                     + "<br />- Also involved on company wide business and techical initiatives"
+                },
+                {
+                    name:"TRATON Financial Services",
+                    logo:"assets/images/companies/traton.png",
+                    when: "November 2025 - February 2026",
+                    location:"Stockholm, Sweden",
+                    url:"https://traton.com/en/company/brands-and-services/financial-services.html",
+                    title:"Senior Software Development Engineer",
+                    description:"- Responsible for integration solutions for financial operations' flows of multiple brands, such as MAN and Scania" 
+                    + "<br />- Implementation of reliable microservices(REST APIs, Scheduled Jobs) as ECS and EKS workloads on AWS within .NET Platform."
                 },
                 {
                     name:"VeriPark",
