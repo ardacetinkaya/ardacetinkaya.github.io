@@ -25,7 +25,12 @@ class ThemeToggle extends Component {
 
     readStoredTheme = () => {
         const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
-        return THEME_ORDER.includes(stored) ? stored : "auto";
+        if (THEME_ORDER.includes(stored)) {
+            return stored;
+        }
+        // Clear invalid stored value
+        window.localStorage.removeItem(THEME_STORAGE_KEY);
+        return "auto";
     }
 
     applyTheme = (theme) => {

@@ -16,6 +16,7 @@ describe("ThemeToggle", () => {
     const { container } = render(<ThemeToggle />);
     expect(container.querySelector(".uil-desktop")).toBeInTheDocument();
     expect(document.documentElement.getAttribute("data-theme")).toBeNull();
+    expect(window.localStorage.getItem("theme")).toBeNull();
   });
 
   test("cycles auto -> light -> dark -> auto on click", () => {
@@ -50,5 +51,6 @@ describe("ThemeToggle", () => {
     const { container } = render(<ThemeToggle />);
     expect(container.querySelector(".uil-desktop")).toBeInTheDocument();
     expect(document.documentElement.getAttribute("data-theme")).toBeNull();
+    expect(window.localStorage.getItem("theme")).toBeNull();
   });
 });
