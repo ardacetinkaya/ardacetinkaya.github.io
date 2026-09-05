@@ -62,7 +62,7 @@ class ThemeToggle extends Component {
         return (
             <button
                 type="button"
-                className="theme-toggle btn btn-link p-0"
+                className="theme-toggle"
                 onClick={this.handleClick}
                 title={label}
                 aria-label={label}

@@ -12,6 +12,22 @@ code {
     monospace;
 }
 
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-top: 0.5rem;
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--color-dark);
+  transform: translateY(-0.15rem);
+}
+
 /* Skills category styling */
 .skills-masonry-container {
   column-count: 3;
