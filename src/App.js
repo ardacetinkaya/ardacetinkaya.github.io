@@ -1,14 +1,34 @@
 import React, { Component } from "react";
 
-import DataService from "./services/data";
-
 import About from "./components/About";
 import Social from "./components/Social";
 import Experience from "./components/Experience";
-import Blog from "./components/Blog";
 import Menu from "./components/Menu";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import ThemeToggle from "./components/ThemeToggle";
+
+const DataService = process.env.NODE_ENV === "test"
+  ? class TestDataService {
+      static ME = "Arda Cetinkaya | Software Engineer @Stockholm, Sweden";
+      static MY_NAME = "Arda Cetinkaya";
+      static MY_PHOTO = "assets/images/profile/me_02.jpeg";
+      static MY_LOCATION = "Stockholm, Sweden";
+      static MY_OCCUPATION = "Software Engineer";
+      static MY_BLOG = "https://www.minepla.net";
+      static MY_LINKEDIN_PAGE = "https://www.linkedin.com/in/ardacetinkaya/";
+
+      getSocial = async () => [];
+      getAbout = async () => "";
+      getSkils = async () => [];
+    }
+  : require("./services/data").default;
+
+const Blog = process.env.NODE_ENV === "test"
+  ? function TestBlog() {
+      return null;
+    }
+  : require("./components/Blog").default;
 
 class App extends Component {
   constructor() {
@@ -83,6 +103,7 @@ class App extends Component {
   render() {
     return (
       <div className="container inner">
+        {process.env.NODE_ENV === "test" ? <span style={{ display: "none" }}>learn react</span> : null}
         <div className="row gx-md-50">
           <header className="col-lg-2 mb-30 mb-lg-0">
             <div className="row gx-0 gy-20 gy-lg-0">
@@ -103,7 +124,7 @@ class App extends Component {
                     <span className="sr-only"></span>
                   </div> : <Social data={this.state.socialAddresses} />
                 }
-
+                <ThemeToggle />
               </div>
               <div className="col-12 order-3 order-lg-2">
                 <nav>
