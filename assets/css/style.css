@@ -41,6 +41,42 @@ Version:	1.0
     }
 }
 
+/* Explicit theme overrides — win over prefers-color-scheme because
+   html[data-theme] has higher specificity than :root. Applied by
+   ThemeToggle via document.documentElement.dataset.theme. */
+html[data-theme="light"] {
+    --color-light: #fff;
+    --color-bg: #f3f3f3;
+    --color-copy: #808080;
+    --color-default: #a7a7a7;
+    --color-muted: #a7a7a7;
+    --color-dark: #303030;
+    --color-border: rgba(0, 0, 0, 0.05);
+    --color-border-strong: rgba(0, 0, 0, 0.1);
+    --shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.08);
+    --color-brand: rgba(0, 0, 0, 0.05);
+    --color-progress: #e9ecef;
+    --input-padding-x: 1rem;
+    --input-padding-y: 0.5rem;
+    --inverted: 0;
+}
+
+html[data-theme="dark"] {
+    --color-light: #222;
+    --color-bg: #121212;
+    --color-copy: #b3b3b3;
+    --color-default: #cccccc;
+    --color-muted: #888888;
+    --color-dark: #ffffff;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-border-strong: rgba(255, 255, 255, 0.2);
+    --shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.8);
+    --color-brand: rgba(255, 255, 255, 0.05);
+    --color-progress: rgba(255, 255, 255, 0.3);
+    --input-padding-x: 1rem;
+    --input-padding-y: 0.5rem;
+    --inverted: 1;
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*	GENERAL
